@@ -1,0 +1,24 @@
+
+{
+    "universitygatewayApp": {
+        "curricolumnRegisterServiceStudentCourseAssignment" : {
+            "home": {
+                "title": "Student Course Assignments",
+                "createLabel": "Create a new Student Course Assignment",
+                "createOrEditLabel": "Create or edit a Student Course Assignment"
+            },
+            "created": "A new Student Course Assignment is created with identifier {{ param }}",
+            "updated": "A Student Course Assignment is updated with identifier {{ param }}",
+            "deleted": "A Student Course Assignment is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Student Course Assignment {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Course Assignment"
+            },
+            "studentId": "Student Id",
+            "help": {
+            }
+        }
+    }
+}

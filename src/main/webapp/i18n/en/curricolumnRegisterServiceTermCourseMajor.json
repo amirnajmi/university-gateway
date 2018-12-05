@@ -1,0 +1,25 @@
+
+{
+    "universitygatewayApp": {
+        "curricolumnRegisterServiceTermCourseMajor" : {
+            "home": {
+                "title": "Term Course Majors",
+                "createLabel": "Create a new Term Course Major",
+                "createOrEditLabel": "Create or edit a Term Course Major"
+            },
+            "created": "A new Term Course Major is created with identifier {{ param }}",
+            "updated": "A Term Course Major is updated with identifier {{ param }}",
+            "deleted": "A Term Course Major is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Term Course Major {{ id }}?"
+            },
+            "detail": {
+                "title": "Term Course Major"
+            },
+            "capacity": "Capacity",
+            "student_Course_Assignments": "Student Course Assignments",
+            "help": {
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>Zuul</servlet-name>
+        <servlet-class>com.netflix.zuul.http.ZuulServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zuul</servlet-name>
+        <url-pattern>/ms/*</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>ContextLifecycleFilter</filter-name>
+        <filter-class>com.netflix.zuul.context.ContextLifecycleFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ContextLifecycleFilter</filter-name>
+        <url-pattern>/ms/*</url-pattern>
+    </filter-mapping>
+</web-app>

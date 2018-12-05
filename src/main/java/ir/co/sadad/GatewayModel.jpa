@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" ptype="MICROSERVICE" ppkg="" epkg="domain" v="5.2" rws="_1542577204919241" cws="_1542577204919241" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_1542577204919240" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_1542577204919241"/>
+    </jpa:wsl>
+</jpa:entity-mappings>

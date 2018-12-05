@@ -1,0 +1,26 @@
+
+{
+    "universitygatewayApp": {
+        "curricolumnRegisterServiceCourseMajor" : {
+            "home": {
+                "title": "Course Majors",
+                "createLabel": "Create a new Course Major",
+                "createOrEditLabel": "Create or edit a Course Major"
+            },
+            "created": "A new Course Major is created with identifier {{ param }}",
+            "updated": "A Course Major is updated with identifier {{ param }}",
+            "deleted": "A Course Major is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Course Major {{ id }}?"
+            },
+            "detail": {
+                "title": "Course Major"
+            },
+            "factor": "Factor",
+            "teacherId": "Teacher Id",
+            "term_Course_Majors": "Term Course Majors",
+            "help": {
+            }
+        }
+    }
+}

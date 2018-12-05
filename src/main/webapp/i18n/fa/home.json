@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "خوش آمدید, Java Duke!",
+        "subtitle": "این صفحه اصلی شماست",
+        "logged": {
+            "message": "شما وارد شدید با کاربر \"{{username}}\"."
+        },
+        "question": "اگر سوالی دارید؟ در مورد Jeddict:",
+        "link": {
+            "homepage": "Jeddict صفحه اصلی",
+            "stackoverflow": "Jeddict در Stack Overflow",
+            "bugtracker": "Jeddict bug tracker",
+            "chat": "Jeddict public chat room",
+            "follow": "دنبال کنید @ImJeddict در Twitter"
+        },
+        "like": "اگر Jeddict را دوست دارید، فراموش نکنید بهش ستاره بدید در",
+        "github": "GitHub"
+    }
+}
