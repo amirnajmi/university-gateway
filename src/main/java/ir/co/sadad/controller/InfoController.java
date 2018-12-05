@@ -1,15 +1,14 @@
 package ir.co.sadad.controller;
 
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-
+import java.util.List;
+import java.util.Optional;
 import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import java.util.List;
-import java.util.Optional;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 /**
  * Controller for profile information.

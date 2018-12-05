@@ -5,23 +5,21 @@ import ir.co.sadad.domain.User;
 import ir.co.sadad.security.TokenProvider;
 import ir.co.sadad.service.UserService;
 import ir.co.sadad.service.dto.LoginDTO;
-import org.eclipse.microprofile.metrics.annotation.Timed;
-import org.eclipse.microprofile.openapi.annotations.Operation;
-import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
-
+import static ir.co.sadad.config.Constants.BEARER_PREFIX;
+import static java.util.stream.Collectors.toSet;
 import javax.inject.Inject;
 import javax.security.enterprise.AuthenticationException;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
-import static ir.co.sadad.config.Constants.BEARER_PREFIX;
-import static java.util.stream.Collectors.toSet;
+import javax.ws.rs.core.MediaType;
 import static javax.ws.rs.core.HttpHeaders.AUTHORIZATION;
 import static javax.ws.rs.core.Response.Status.UNAUTHORIZED;
+import org.eclipse.microprofile.metrics.annotation.Timed;
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 
 @Path("/api")
 public class AuthenticationController {

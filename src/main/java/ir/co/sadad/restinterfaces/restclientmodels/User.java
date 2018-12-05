@@ -3,6 +3,7 @@ package ir.co.sadad.restinterfaces.restclientmodels;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 /**

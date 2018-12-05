@@ -1,10 +1,9 @@
 package ir.co.sadad.security;
 
-import org.slf4j.Logger;
-
-import javax.inject.Inject;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import javax.inject.Inject;
+import org.slf4j.Logger;
 
 public class PasswordEncoder {
 

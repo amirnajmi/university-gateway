@@ -1,9 +1,9 @@
 package ir.co.sadad.controller.util;
 
+import java.net.URISyntaxException;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.Response.ResponseBuilder;
 import javax.ws.rs.core.UriBuilder;
-import java.net.URISyntaxException;
 
 /**
  * Utility class for handling pagination.

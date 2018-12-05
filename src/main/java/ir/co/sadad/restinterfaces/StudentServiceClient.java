@@ -1,6 +1,7 @@
 package ir.co.sadad.restinterfaces;
 
 
+import ir.co.sadad.controller.util.HeaderUtil;
 import ir.co.sadad.exception.StudentCreationException;
 import ir.co.sadad.restinterfaces.restclientmodels.Student;
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
@@ -10,6 +11,8 @@ import javax.enterprise.context.Dependent;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 @Dependent
 @RegisterRestClient

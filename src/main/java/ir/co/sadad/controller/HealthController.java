@@ -1,11 +1,10 @@
 package ir.co.sadad.controller;
 
+import javax.inject.Inject;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.health.Health;
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
-
-import javax.inject.Inject;
 
 @Health
 public class HealthController implements HealthCheck {

@@ -1,27 +1,21 @@
 package ir.co.sadad.service;
 
-import ir.co.sadad.domain.Authority;
-import ir.co.sadad.domain.User;
 import ir.co.sadad.repository.AuthorityRepository;
 import ir.co.sadad.repository.UserRepository;
 import ir.co.sadad.security.AuthoritiesConstants;
 import ir.co.sadad.security.PasswordEncoder;
+import ir.co.sadad.domain.User;
+import ir.co.sadad.domain.Authority;
 import ir.co.sadad.security.SecurityHelper;
 import ir.co.sadad.service.dto.LoginDTO;
-import ir.co.sadad.service.dto.UserDTO;
 import ir.co.sadad.util.RandomUtil;
-import org.slf4j.Logger;
-
+import ir.co.sadad.service.dto.UserDTO;
+import java.time.Instant;
+import java.util.*;
+import static java.util.stream.Collectors.*;
 import javax.inject.Inject;
 import javax.security.enterprise.AuthenticationException;
-import java.time.Instant;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-
-import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.toSet;
+import org.slf4j.Logger;
 
 /**
  * Service class for managing users.
@@ -81,7 +75,7 @@ public class UserService {
     }
 
     public User createUser(String login, String password, String firstName, String lastName, String email,
-                           String langKey) {
+            String langKey) {
 
         User newUser = new User();
         Authority authority = authorityRepository.find(AuthoritiesConstants.USER);

@@ -4,19 +4,18 @@ import com.netflix.util.Pair;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.constants.ZuulHeaders;
 import com.netflix.zuul.context.RequestContext;
-import org.slf4j.Logger;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import org.slf4j.Logger;
+import javax.enterprise.context.ApplicationScoped;
+import javax.servlet.http.HttpServletResponse;
 import java.nio.charset.Charset;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipException;
+import javax.inject.Inject;
 
 @ApplicationScoped
 public class SendResponseFilter extends ZuulFilter {

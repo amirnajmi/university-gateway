@@ -1,24 +1,19 @@
 package ir.co.sadad.security;
 
+import ir.co.sadad.config.SecurityConfig;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import ir.co.sadad.config.SecurityConfig;
-import org.eclipse.microprofile.jwt.Claims;
-import org.slf4j.Logger;
-
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-import java.security.KeyFactory;
-import java.security.PrivateKey;
-import java.security.spec.PKCS8EncodedKeySpec;
-import java.util.Base64;
-import java.util.Date;
-import java.util.Set;
-import java.util.UUID;
-
 import static io.jsonwebtoken.Header.JWT_TYPE;
 import static io.jsonwebtoken.Header.TYPE;
 import static java.lang.Thread.currentThread;
+import java.security.KeyFactory;
+import java.security.PrivateKey;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.util.*;
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+import org.eclipse.microprofile.jwt.Claims;
+import org.slf4j.Logger;
 
 public class TokenProvider {
 

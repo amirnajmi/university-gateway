@@ -2,6 +2,12 @@ package ir.co.sadad.mail;
 
 import ir.co.sadad.config.MailConfig;
 import ir.co.sadad.domain.User;
+import java.io.StringWriter;
+import java.util.Locale;
+import java.util.function.Function;
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.event.ObservesAsync;
+import javax.inject.Inject;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.HtmlEmail;
 import org.apache.deltaspike.core.api.message.Message;
@@ -10,13 +16,6 @@ import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.slf4j.Logger;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.event.ObservesAsync;
-import javax.inject.Inject;
-import java.io.StringWriter;
-import java.util.Locale;
-import java.util.function.Function;
 
 @ApplicationScoped
 public class MailNotifier {

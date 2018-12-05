@@ -1,18 +1,19 @@
 package ir.co.sadad.domain;
 
+import static ir.co.sadad.config.Constants.LOGIN_REGEX;
+import static ir.co.sadad.config.Constants.EMAIL_REGEX;
+import static ir.co.sadad.config.Constants.EMAIL_REGEX_MESSAGE;
+import java.io.Serializable;
+import java.time.Instant;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Set;
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
-import java.time.Instant;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Set;
-
-import static ir.co.sadad.config.Constants.*;
 
 /**
  * A user.

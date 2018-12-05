@@ -320,6 +320,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -402,39 +403,7 @@
                 <web.port>8080</web.port>
             </properties>
         </profile>
-        <profile>
-            <id>prod</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-clean-plugin</artifactId>
-                        <configuration>
-                            <filesets>
-                                <fileset>
-                                    <directory>target/www/</directory>
-                                </fileset>
-                            </filesets>
-                        </configuration>
-                        <version>${version.maven-clean-plugin}</version>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <configuration>
-                            <warSourceDirectory>target/www/</warSourceDirectory>
-                            <failOnMissingWebXml>false</failOnMissingWebXml>
-                        </configuration>
-                        <version>${version.maven-war-plugin}</version>
-                    </plugin>
 
-                </plugins>
-            </build>
-            <properties>
-                <environment>prod</environment>
-                <web.port>8083</web.port>
-            </properties>
-        </profile>
 
     </profiles>
 

@@ -1,13 +1,11 @@
 package ir.co.sadad.repository;
 
 import ir.co.sadad.domain.User;
-
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
+import static java.util.Collections.singletonMap;
 import java.util.List;
 import java.util.Optional;
-
-import static java.util.Collections.singletonMap;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
 
 public class UserRepository extends AbstractRepository<User, Long> {
 

@@ -2,11 +2,10 @@ package ir.co.sadad.service;
 
 import ir.co.sadad.domain.User;
 import ir.co.sadad.mail.MailEvent;
-import org.slf4j.Logger;
-
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
+import org.slf4j.Logger;
 
 /**
  * Service for sending e-mails.

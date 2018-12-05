@@ -1,17 +1,17 @@
 package ir.co.sadad.web;
 
-import ir.co.sadad.metrics.InstrumentedFilter;
-import org.slf4j.Logger;
-
+import java.util.EnumSet;
 import javax.inject.Inject;
+import static javax.servlet.DispatcherType.ASYNC;
+import static javax.servlet.DispatcherType.FORWARD;
+import static javax.servlet.DispatcherType.REQUEST;
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import java.util.EnumSet;
-
-import static javax.servlet.DispatcherType.*;
+import org.slf4j.Logger;
+import ir.co.sadad.metrics.InstrumentedFilter;
 
 /**
  * Configuration of web application

@@ -1,31 +1,37 @@
 package ir.co.sadad.controller;
 
+import static ir.co.sadad.controller.ApplicationTest.USERNAME;
+import ir.co.sadad.security.AuthoritiesConstants;
+import ir.co.sadad.repository.AuthorityRepository;
+import ir.co.sadad.repository.UserRepository;
 import ir.co.sadad.controller.vm.KeyAndPasswordVM;
 import ir.co.sadad.controller.vm.ManagedUserVM;
 import ir.co.sadad.controller.vm.PasswordChangeVM;
-import ir.co.sadad.domain.User;
-import ir.co.sadad.repository.AuthorityRepository;
-import ir.co.sadad.repository.UserRepository;
-import ir.co.sadad.security.AuthoritiesConstants;
 import ir.co.sadad.service.dto.UserDTO;
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import javax.inject.Inject;
-import javax.ws.rs.core.Response;
-import java.util.Optional;
-
+import ir.co.sadad.domain.User;
 import static ir.co.sadad.security.AuthoritiesConstants.ADMIN;
 import static ir.co.sadad.security.AuthoritiesConstants.USER;
 import static java.util.Collections.singleton;
-import static javax.ws.rs.core.Response.Status.*;
+import java.util.Optional;
+import javax.inject.Inject;
+import javax.ws.rs.core.Response;
+import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
+import static javax.ws.rs.core.Response.Status.CREATED;
+import static javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
+import static javax.ws.rs.core.Response.Status.OK;
+import static javax.ws.rs.core.Response.Status.UNAUTHORIZED;
+import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.jboss.arquillian.junit.Arquillian;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import org.junit.Before;
 import static org.valid4j.matchers.http.HttpResponseMatchers.hasStatus;
 
 /**

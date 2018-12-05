@@ -1,11 +1,9 @@
 package ir.co.sadad.controller.vm;
 
-import ir.co.sadad.service.dto.UserDTO;
-
-import javax.validation.constraints.Size;
 import java.time.Instant;
 import java.util.Set;
-
+import javax.validation.constraints.Size;
+import ir.co.sadad.service.dto.UserDTO;
 import static ir.co.sadad.config.Constants.PASSWORD_MAX_LENGTH;
 import static ir.co.sadad.config.Constants.PASSWORD_MIN_LENGTH;
 

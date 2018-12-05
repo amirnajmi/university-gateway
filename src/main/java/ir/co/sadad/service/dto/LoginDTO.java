@@ -1,10 +1,11 @@
 package ir.co.sadad.service.dto;
 
+import static ir.co.sadad.config.Constants.LOGIN_REGEX;
+import static ir.co.sadad.config.Constants.PASSWORD_MAX_LENGTH;
+import static ir.co.sadad.config.Constants.PASSWORD_MIN_LENGTH;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
-import static ir.co.sadad.config.Constants.*;
 
 /**
  * A DTO representing a user's credentials

@@ -1,35 +1,34 @@
 package ir.co.sadad.controller;
 
 import ir.co.sadad.config.SecurityConfig;
+import ir.co.sadad.security.SecurityHelper;
+import ir.co.sadad.producer.TemplateEngineProducer;
+import ir.co.sadad.service.MailService;
+import ir.co.sadad.mail.MailNotifier;
+import ir.co.sadad.util.RandomUtil;
+import ir.co.sadad.service.UserService;
+import ir.co.sadad.service.dto.LoginDTO;
+import ir.co.sadad.service.dto.UserDTO;
 import ir.co.sadad.controller.vm.ManagedUserVM;
 import ir.co.sadad.domain.AbstractAuditingEntity;
 import ir.co.sadad.domain.AuditListner;
 import ir.co.sadad.domain.Authority;
 import ir.co.sadad.domain.User;
-import ir.co.sadad.mail.MailNotifier;
-import ir.co.sadad.producer.TemplateEngineProducer;
 import ir.co.sadad.repository.AuthorityRepository;
 import ir.co.sadad.repository.UserRepository;
-import ir.co.sadad.security.SecurityHelper;
-import ir.co.sadad.service.MailService;
-import ir.co.sadad.service.UserService;
-import ir.co.sadad.service.dto.LoginDTO;
-import ir.co.sadad.service.dto.UserDTO;
-import ir.co.sadad.util.RandomUtil;
+import static ir.co.sadad.controller.AbstractTest.buildArchive;
+import java.io.File;
+import java.net.URL;
+import java.util.Map;
+import javax.ws.rs.client.ClientRequestFilter;
+import javax.ws.rs.client.Invocation;
+import static javax.ws.rs.core.HttpHeaders.AUTHORIZATION;
+import javax.ws.rs.core.Response;
 import junit.framework.AssertionFailedError;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.After;
 import org.junit.Before;
-
-import javax.ws.rs.client.ClientRequestFilter;
-import javax.ws.rs.client.Invocation;
-import javax.ws.rs.core.Response;
-import java.io.File;
-import java.net.URL;
-import java.util.Map;
-
-import static javax.ws.rs.core.HttpHeaders.AUTHORIZATION;
 
 /**
  * Abstract class for application packaging.

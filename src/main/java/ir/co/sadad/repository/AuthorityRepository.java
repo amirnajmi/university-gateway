@@ -1,7 +1,6 @@
 package ir.co.sadad.repository;
 
 import ir.co.sadad.domain.Authority;
-
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 

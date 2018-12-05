@@ -1,28 +1,33 @@
 package ir.co.sadad.controller;
 
+import static ir.co.sadad.controller.ApplicationTest.USERNAME;
 import ir.co.sadad.controller.vm.ManagedUserVM;
 import ir.co.sadad.domain.User;
 import ir.co.sadad.repository.UserRepository;
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import javax.inject.Inject;
-import javax.ws.rs.core.Response;
-import java.util.List;
-import java.util.Optional;
-
 import static ir.co.sadad.security.AuthoritiesConstants.USER;
 import static java.util.Collections.singleton;
-import static javax.ws.rs.core.HttpHeaders.AUTHORIZATION;
-import static javax.ws.rs.core.Response.Status.*;
+import java.util.List;
+import java.util.Optional;
+import javax.inject.Inject;
+import javax.ws.rs.core.Response;
+import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
+import static javax.ws.rs.core.Response.Status.CREATED;
+import static javax.ws.rs.core.Response.Status.OK;
+import static javax.ws.rs.core.Response.Status.NOT_FOUND;
+import static javax.ws.rs.core.Response.Status.UNAUTHORIZED;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.jboss.arquillian.junit.Arquillian;
+import org.junit.runner.RunWith;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
+import org.junit.Test;
 import static org.valid4j.matchers.http.HttpResponseMatchers.hasHeader;
 import static org.valid4j.matchers.http.HttpResponseMatchers.hasStatus;
+import static javax.ws.rs.core.HttpHeaders.AUTHORIZATION;
+import org.junit.Before;
 
 /**
  * Test class for the UserController REST controller.

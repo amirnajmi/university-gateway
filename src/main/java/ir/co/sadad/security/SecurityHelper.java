@@ -1,10 +1,10 @@
 package ir.co.sadad.security;
 
 import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
-import javax.security.enterprise.SecurityContext;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.inject.Inject;
+import javax.security.enterprise.SecurityContext;
 
 /**
  * Utility class for Security.

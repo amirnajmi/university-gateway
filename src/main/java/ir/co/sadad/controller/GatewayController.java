@@ -1,12 +1,14 @@
 package ir.co.sadad.controller;
 
-import com.orbitz.consul.Consul;
-import com.orbitz.consul.model.health.Service;
 import ir.co.sadad.controller.vm.RouteVM;
 import ir.co.sadad.controller.vm.ServiceInstanceVM;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
+import com.orbitz.consul.Consul;
+import com.orbitz.consul.model.health.Service;
+import java.net.URI;
+import java.util.ArrayList;
+import static java.util.Arrays.asList;
+import java.util.List;
 import org.eclipse.microprofile.metrics.annotation.Timed;
-
 import javax.inject.Inject;
 import javax.json.JsonObject;
 import javax.ws.rs.GET;
@@ -14,12 +16,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.Response;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
-
-import static java.util.Arrays.asList;
 import static javax.ws.rs.core.Response.Status.OK;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 /**
  * Controller for view and managing Log Level at runtime.

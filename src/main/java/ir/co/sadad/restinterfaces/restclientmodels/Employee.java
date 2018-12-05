@@ -1,6 +1,9 @@
 package ir.co.sadad.restinterfaces.restclientmodels;
 
 
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+
 /**
  * @author ammac
  */

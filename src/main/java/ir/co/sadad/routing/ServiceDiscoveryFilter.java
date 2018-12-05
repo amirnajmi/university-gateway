@@ -4,13 +4,12 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.orbitz.consul.Consul;
 import com.orbitz.consul.model.health.Service;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-import org.slf4j.Logger;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 import java.net.MalformedURLException;
 import java.net.URL;
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.slf4j.Logger;
 
 @ApplicationScoped
 public class ServiceDiscoveryFilter extends ZuulFilter {

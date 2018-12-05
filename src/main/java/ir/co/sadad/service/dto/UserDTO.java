@@ -1,17 +1,18 @@
 package ir.co.sadad.service.dto;
 
+import static ir.co.sadad.config.Constants.LOGIN_REGEX;
+import static ir.co.sadad.config.Constants.EMAIL_REGEX;
+import static ir.co.sadad.config.Constants.EMAIL_REGEX_MESSAGE;
 import ir.co.sadad.domain.Authority;
 import ir.co.sadad.domain.User;
+import java.io.Serializable;
+import java.time.Instant;
+import java.util.Set;
+import static java.util.stream.Collectors.toSet;
 
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.Column;
 import javax.validation.constraints.*;
-import java.io.Serializable;
-import java.time.Instant;
-import java.util.Set;
-
-import static ir.co.sadad.config.Constants.*;
-import static java.util.stream.Collectors.toSet;
 
 /**
  * A DTO representing a user, with his authorities.
